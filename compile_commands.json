@@ -1,0 +1,36 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-std=c99",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      ".build/src/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/whamdi/pipex",
+    "file": "/home/whamdi/pipex/src/main.c",
+    "output": "/home/whamdi/pipex/.build/src/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-std=c99",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Iinclude",
+      "-c",
+      "-o",
+      ".build/src/pipex.o",
+      "src/pipex.c"
+    ],
+    "directory": "/home/whamdi/pipex",
+    "file": "/home/whamdi/pipex/src/pipex.c",
+    "output": "/home/whamdi/pipex/.build/src/pipex.o"
+  }
+]
