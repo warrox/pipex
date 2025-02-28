@@ -12,7 +12,7 @@ INC_DIRS := include
 BUILD_DIR := .build
 
 # Définition manuelle des fichiers sources
-SRCS := src/main.c src/pipex.c
+SRCS :=  src/main.c
 
 INCS := $(addprefix -I, $(INC_DIRS))
 OBJS := $(patsubst %.c, $(BUILD_DIR)/%.o, $(SRCS))
