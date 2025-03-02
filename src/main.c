@@ -5,9 +5,11 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/wait.h>
+#define SHELL "/bin/sh"
 int main(const int argc, char **argv)
 {
-	char  *ptr[] = {"/bin/sh","-c","ls",NULL};
+	printf("argv : %s\n" , argv[2]);
+	char  *ptr[] = {SHELL,"-c",argv[2],NULL};
 	if(argc < 5){
 		printf("./Pipex <file1> <cmd1> <file2> <cmd2>\n");
 	}
@@ -21,7 +23,7 @@ int main(const int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}	
 	else if(rc == 0){
-		execvp("/bin/sh",ptr);
+		execvp(SHELL,ptr);
 		char *cmd1[] = {strcat("~/bin",argv[3]),0};
 		printf("CMD1 : %s", cmd1[0]);
 		write(1,"XXX\n",4);
